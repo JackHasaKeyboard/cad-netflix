@@ -1,0 +1,2 @@
+class HerController < ApplicationController
+end

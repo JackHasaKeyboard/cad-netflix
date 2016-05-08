@@ -1,0 +1,38 @@
+=render "layouts/head"
+
+#search
+  .tag
+    %span genre:sci-fi
+    %span x
+  .tag
+    %span genre:romance
+    %span x
+  -#.tag
+    %span genre:alternative
+    %span x
+  .tag
+    %span rt-score:>80
+    %span x
+
+  %input{ :type => "", :placeholder => "Search..." }/
+
+#film
+  = image_tag("poster/Her.png")
+  = image_tag("snap-1.png")
+
+  %div
+    %h3 Her
+    %h3 2013
+    %h5 A lonely man in the near distant future falls in love with a computer.
+
+  %div
+    %h3 RT - 94%
+    %h3 MC - 90%
+    %h3 User Reviews - 91% (162) 
+
+#bin
+  - films = ["Her", "Moonrise Kingdom", "Attack the Block", "Shaun of the Dead"]
+  - films.each do |film|
+    %div
+      = image_tag("poster/#{film}.png")
+      %h3= film 
